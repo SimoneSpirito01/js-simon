@@ -64,7 +64,15 @@ const fiveUser = () => {
     }
 }
 
+// funzione che nasconde un elemento
+const hidden = (who) => {
+    who.classList.add('d-none')
+}
 
+// funzione che rende visibile un elemento
+const visible = (who) => {
+    who.classList.remove('d-none')
+}
 
 const box1 = document.querySelector('.box');
 const box2 = document.querySelector('.box:last-of-type');
@@ -72,8 +80,12 @@ const userN = document.querySelector('.box .user-numbers');
 const userT = document.querySelector('.box .text');
 let pcNumbers = fiveRandom(box1);
 
+console.log(pcNumbers);
+setTimeout(hidden, 900, box1);
 setTimeout(fiveUser, 1000);
+setTimeout(visible, 1000, box1);
 setTimeout(winLose, 1000, pcNumbers, userNumbers, box2, userT, userN);
+
 
 
 
