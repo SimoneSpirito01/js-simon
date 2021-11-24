@@ -57,7 +57,7 @@ let userNumbers = []
 const fiveUser = () => {
     for (let i = 0; i < 5; i++){
         let number = parseInt(prompt('Inserisci, uno alla volta, i  5 numeri che hai memorizzato'));
-        while (userNumbers.includes(number) ||isNaN(number)){
+        while (userNumbers.includes(number) || isNaN(number)){
             number = parseInt(prompt('ATTENZIONE! Inserisci, uno alla volta, i 5 numeri DIVERSI tra loro che hai memorizzato'));
         }
         userNumbers.push(number);
@@ -73,6 +73,15 @@ const hidden = (who) => {
 const visible = (who) => {
     who.classList.remove('d-none')
 }
+
+// countdown 30s dinamico
+const text = document.querySelector('.text span');
+let time = 29;
+const timer = setInterval(() => {
+    text.innerHTML = time;
+    (time != 0) ? time-- : clearInterval((timer));
+}, 1000);
+
 
 const box1 = document.querySelector('.box');
 const box2 = document.querySelector('.box:last-of-type');
