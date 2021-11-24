@@ -81,10 +81,10 @@ const userT = document.querySelector('.box .text');
 let pcNumbers = fiveRandom(box1);
 
 console.log(pcNumbers);
-setTimeout(hidden, 900, box1);
-setTimeout(fiveUser, 1000);
-setTimeout(visible, 1000, box1);
-setTimeout(winLose, 1000, pcNumbers, userNumbers, box2, userT, userN);
+setTimeout(hidden, 30000, box1);
+setTimeout(fiveUser, 30500);
+setTimeout(visible, 30500, box1);
+setTimeout(winLose, 30500, pcNumbers, userNumbers, box2, userT, userN);
 
 
 
